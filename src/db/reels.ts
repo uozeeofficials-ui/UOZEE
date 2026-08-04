@@ -26,7 +26,7 @@ export const reels: Reel[] = [
     id: "reel-4",
     videoSrc: "/v4.mp4",
     caption: "Unboxing the Royal Oud collection",
-    handle: "@uozeeofficials",
+    handle: "@uozeeofficial",
     href: "https://www.instagram.com/uozeeofficials/",
   },
 ];
