@@ -79,7 +79,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-paper/10 py-6 text-center text-xs uppercase tracking-[0.2em] text-paper/40">
-        &copy; {new Date().getFullYear()} {siteConfig.fullName}. All rights reserved.
+        &copy; {new Date().getFullYear()} {siteConfig.fullName}
       </div>
     </footer>
   );

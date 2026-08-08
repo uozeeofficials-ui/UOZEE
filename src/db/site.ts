@@ -2,7 +2,7 @@ import type { NavLink, SocialLink } from "./types";
 
 export const siteConfig = {
   name: "UOZEE ",
-  fullName: "UOZEE OFFICIALS",
+  fullName: "UOZEE OFFICIAL", 
   browserTitle: "UOZEE OFFICIALS",
   tagline: "Ultra-Premium Perfume House",
   logo: "https://res.cloudinary.com/so8vztrp/image/upload/v1783270277/logo2_joyalt.png",
@@ -10,9 +10,9 @@ export const siteConfig = {
     "An elite perfumery house crafting high-projection, luxury scents inspired by historical royalty and modern trends.",
   currencySymbol: "PKR",
   announcements: [
-    "Coming soon — launching across Pakistan",
+    "AZADI SALE UPTO 30% OFF",
     "Free delivery on all prepaid orders above PKR 5,000",
-    "Cash on delivery available nationwide",
+    "Cash on delivery available",
   ],
   contact: {
     email: "uozeeofficials@gmail.com",

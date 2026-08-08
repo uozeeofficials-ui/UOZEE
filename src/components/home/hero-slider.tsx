@@ -45,7 +45,7 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
 
   return (
     <section
-      className="relative h-[82dvh] min-h-[520px] w-full overflow-hidden bg-ink sm:h-[92dvh]"
+      className="relative mx-auto my-4 h-[520px] w-[calc(100%-2rem)] overflow-hidden rounded-[24px] border border-white/10 bg-ink shadow-[0_35px_90px_-35px_rgba(0,0,0,0.75)] sm:my-6 sm:h-[500px] sm:w-[calc(100%-3rem)] sm:rounded-[28px] lg:my-8 lg:h-[560px] lg:w-[calc(100%-4rem)] lg:rounded-[32px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={handleTouchStart}
@@ -62,9 +62,9 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
           <SafePicture
             sources={slide.image}
             alt={slide.heading}
-            className="absolute inset-0 h-full w-full"
+            className="absolute inset-0 h-full w-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-ink/0 to-ink/5" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/45 to-ink/20" />
         </div>
       ))}
 
@@ -72,7 +72,7 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
         type="button"
         aria-label="Previous slide"
         onClick={prev}
-        className="absolute left-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-paper/30 text-paper transition hover:bg-paper hover:text-ink sm:flex"
+        className="absolute left-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-paper/20 bg-black/20 text-paper backdrop-blur-sm transition hover:bg-black/35 hover:text-paper sm:flex"
       >
         <ChevronLeftIcon className="h-5 w-5" />
       </button>
@@ -80,12 +80,12 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
         type="button"
         aria-label="Next slide"
         onClick={next}
-        className="absolute right-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-paper/30 text-paper transition hover:bg-paper hover:text-ink sm:flex"
+        className="absolute right-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-paper/20 bg-black/20 text-paper backdrop-blur-sm transition hover:bg-black/35 hover:text-paper sm:flex"
       >
         <ChevronRightIcon className="h-5 w-5" />
       </button>
 
-      <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3">
+      <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2.5 sm:bottom-5">
         {slides.map((slide, i) => (
           <button
             key={slide.id}
@@ -93,8 +93,8 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => goTo(i)}
             className={cn(
-              "h-2.5 w-2.5 rounded-full transition-all duration-300",
-              i === index ? "scale-125 bg-gold-light" : "bg-paper/40 hover:bg-paper/70"
+              "h-2.5 rounded-full transition-all duration-300",
+              i === index ? "w-7 bg-gold-light" : "w-2.5 bg-paper/45 hover:bg-paper/70"
             )}
           />
         ))}
